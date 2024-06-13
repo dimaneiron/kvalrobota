@@ -1,0 +1,340 @@
+/* styles.css */
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-list {
+  width: 1060px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 480px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.product-name {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  margin: 5px 0;
+}
+
+/* Filters */
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  margin-right: 10px;
+}
+
+.filter-select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.filters {
+  position: fixed;
+  top: 130px; /* Розташування елемента зверху */
+  left: 200px;
+  width: 220px; /* Ширина елемента */
+  background-color: #fff; /* Фоновий колір */
+  padding: 10px; /* Відступи всередині елемента */
+  border: 1px solid #ccc; /* Лінія ліворуч від елемента */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+.filter-column {
+  margin-right: 20px;
+}
+
+.filter-select,
+.filter-input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-item {
+  margin-bottom: 20px;
+}
+
+.product-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.product-img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.product-details {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.product-page {
+  width: 800px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-page-details {
+  display: flex;
+  align-items: center;
+}
+
+.product-img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+}
+
+.info p {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.info p:first-child {
+  margin-top: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 460px;
+  width: 50%;
+  max-width: 950px;
+  background-color: #f0f0f0; /* Фоновий колір хедера */
+  padding: 20px; /* Відступи всередині хедера */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь хедера */
+  border-radius: 10px; /* Закругленість кутів хедера */
+}
+
+.cart-icon {
+  width: 30px; /* Ширина іконки корзини */
+  height: auto; /* Автоматична висота іконки корзини */
+  margin: 0 10px; /* Відступи навколо іконки корзини */
+}
+
+.search-input {
+  width: 600px;
+  flex: 1; /* Розтягуємо по всій доступній ширині */
+  margin: 0 10px; /* Відступи навколо поля пошуку */
+  padding: 10px; /* Внутрішні відступи поля пошуку */
+  border: 1px solid #ccc; /* Рамка поля пошуку */
+  border-radius: 5px; /* Закругленість кутів поля пошуку */
+}
+
+.cart-icon:hover {
+  cursor: pointer; /* Зміна курсору при наведенні на іконку корзини */
+}
+
+.cart-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-name {
+  font-weight: bold;
+}
+.recomend {
+  text-align: center;
+}
+.item-price {
+  margin-top: 5px;
+}
+.suggestions {
+  position: absolute;
+  top: 60px;
+  z-index: 999;
+  left: 693px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 618px;
+}
+
+.product-link > .product-img {
+  margin: 0;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.header > a > p {
+  font-size: 24px;
+  margin: 10px 0px;
+}
+
+.cart-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item .product-img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.order-form input,
+.order-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.order-form button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+.addToCartButton {
+  background-color: #007bff; /* Зелений колір */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.addToCartButton:hover {
+  background-color: #0056b3; /* Зелений колір при наведенні */
+}
+
+.cart-item-count {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+}
